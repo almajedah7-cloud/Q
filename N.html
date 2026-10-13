@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>منصة قياس الأثر - مجمع الثانوية الثامنة ومتوسطة 39</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f1ea;--card:#fff;--ink:#1d2b27;--mut:#6b7a74;--pri:#0f4c3f;--acc:#b8924a;--line:#d9d3c4;--soft:#faf7f0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13201c;--card:#1b2b26;--ink:#eef2ef;--mut:#9fb2aa;--pri:#4fb597;--acc:#d6b068;--line:#34493f;--soft:#223630}}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Tajawal',Tahoma,Arial,sans-serif;line-height:1.5}
+.wrap{max-width:920px;margin:0 auto;padding:12px}
+.top{display:grid;grid-template-columns:150px 1fr 150px;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-bottom:4px solid var(--acc);border-radius:14px;padding:10px}
+.top h1{margin:2px 0;font-size:1.4rem;color:var(--pri)}
+.top small{color:var(--mut)}
+.ttl{text-align:center}
+.lg{display:flex;align-items:center;justify-content:center;min-height:76px;border:2px dashed var(--line);border-radius:10px;cursor:pointer;font-size:.78rem;color:var(--mut);text-align:center;padding:4px}
+.lg img{max-width:100%;max-height:84px}
+.lg.has{border:0}
+.prog,section{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-top:12px;overflow:hidden}
+h2{margin:0;padding:8px 14px;background:var(--pri);color:#fff;font-size:1rem;display:flex;justify-content:space-between;align-items:center}
+h3{margin:12px 0 5px;color:var(--pri);font-size:.92rem}
+.body{padding:10px 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+label{display:block;font-size:.85rem;color:var(--mut);font-weight:700}
+input,textarea,select{width:100%;font:inherit;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:7px 9px}
+textarea{min-height:60px;resize:vertical}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th{background:var(--soft);font-size:.8rem;padding:5px;border:1px solid var(--line)}
+td{border:1px solid var(--line);padding:3px}
+td.c{text-align:center;font-weight:700;white-space:nowrap;padding:3px 8px}
+button,.btn{font:inherit;cursor:pointer;border:0;border-radius:8px;padding:8px 14px;font-weight:700;display:inline-block}
+.add{background:var(--soft);color:var(--pri);border:1px dashed var(--pri);margin-top:8px}
+.del{background:none;color:#b3402f;padding:2px 8px}
+h2 .del{color:#ffd2c9}
+.ev{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:6px}
+.ev figure{margin:0;border:1px solid var(--line);border-radius:8px;padding:5px;background:var(--soft);break-inside:avoid}
+.ev img{width:100%;height:110px;object-fit:cover;border-radius:6px}
+.ev figure input{margin-top:4px;font-size:.8rem}
+.mid{text-align:center;margin:14px 0}
+.addp{background:var(--acc);color:#fff;font-size:1rem;padding:11px 26px}
+.actions{position:sticky;bottom:0;padding:10px 0 4px;display:flex;justify-content:center;background:linear-gradient(transparent,var(--bg) 40%)}
+.print{background:var(--pri);color:#fff;font-size:1.05rem;padding:11px 30px}
+.sign{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center}
+.sign div{border-top:1px solid var(--ink);padding-top:4px;margin-top:28px;font-size:.85rem}
+.sign input{text-align:center;margin-top:4px}
+.pdate{display:none}
+.up{color:#1b7a4b}.dn{color:#b3402f}
+@media (max-width:560px){.top{grid-template-columns:1fr 1fr}.ttl{grid-column:1/-1;order:3}}
+@media print{
+ @page{size:A4;margin:8mm}
+ body{background:#fff;color:#000;font-size:10pt}
+ .wrap{max-width:none;padding:0}
+ .noprint,.actions,.add,.del,.mid{display:none!important}
+ .prog,section{border-color:#999;margin-top:8px}
+ tr{break-inside:avoid}
+ .lg.empty{display:none}
+ .ev img{height:70px}
+ textarea{min-height:40px}
+ input,textarea,select{background:#fff;border:0;border-bottom:1px dotted #888;border-radius:0;padding:2px;appearance:none;-webkit-appearance:none}
+ textarea{resize:none}
+ h2,th,.top{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .pdate{display:block;text-align:center;font-size:.8rem;margin-top:6px}
+ table{min-width:0}
+ .sign div{margin-top:18px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top">
+ <label class="lg" id="logoBox"></label>
+ <div class="ttl"><small>المملكة العربية السعودية — وزارة التعليم</small><h1>تقرير قياس الأثر</h1><div>مجمع الثانوية الثامنة ومتوسطة 39</div></div>
+ <div><label>الفترة / العام الدراسي</label><input id="period" placeholder="مثال: 1448هـ"></div>
+</div>
+
+<div id="progs"></div>
+
+<div class="mid"><button class="addp" data-act="addp">+ إضافة برنامج أو مبادرة</button></div>
+
+<section><div class="body"><div class="sign"><div>معدّ التقرير<input></div><div>قائد/ة المدرسة<input></div><div>الختم</div></div><div class="pdate" id="pd"></div></div></section>
+
+<div class="actions"><button class="print" onclick="doPrint()">🖨️ طباعة / حفظ PDF</button></div>
+</div>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+const num=v=>{v=parseFloat(String(v).replace(/[\u0660-\u0669]/g,d=>'\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669'.indexOf(d)).replace(/[\u066b,\u060c]/g,'.').replace(/[^\d.\-]/g,''));return isNaN(v)?null:v};
+const f=(n,d=1)=>Number.isInteger(n)?String(n):n.toFixed(d);
+const TOOLS=['ملاحظة','استبانة','نتائج اختبار','مقابلات','تحليل وثائق','أخرى'];
+const row=()=>({ind:'',pre:'',post:'',dir:'up'});
+const mk=()=>({name:'',tool:'',rows:[row(),row(),row()],recs:'',ev:[]});
+let S;try{S=JSON.parse(localStorage.getItem('impv2'))}catch(e){}
+if(!S||!S.programs)S={logo:'',period:'',programs:[mk()]};
+function save(){try{localStorage.setItem('impv2',JSON.stringify(S))}catch(e){}}
+function compress(file){return new Promise(res=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const m=900,k=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(im,0,0,c.width,c.height);res(c.toDataURL('image/jpeg',.72))};im.onerror=()=>res(null);im.src=r.result};r.onerror=()=>res(null);r.readAsDataURL(file)})}
+const inp=(k,v,t='text',ph='')=>`<input data-k="${k}" type="text" ${t=='number'?'inputmode="decimal"':''} value="${esc(v)}" placeholder="${ph}">`;
+function logo(){const b=$('#logoBox');b.className='lg '+(S.logo?'has':'empty');b.innerHTML=(S.logo?`<img src="${S.logo}" alt="شعار وزارة التعليم">`:'ارفع شعار وزارة التعليم الرسمي هنا')+'<input type="file" accept="image/*" hidden data-act="logo">';$('#period').value=S.period||''}
+function progHTML(p,i){
+ const rows=p.rows.map((r,j)=>`<tr data-r="${j}"><td class="c">${j+1}</td><td>${inp('ind',r.ind,'text','اسم المؤشر')}</td><td>${inp('pre',r.pre,'number')}</td><td>${inp('post',r.post,'number')}</td><td class="c" id="ch-${i}-${j}">—</td><td class="c" id="pc-${i}-${j}">—</td><td><select data-k="dir"><option value="up"${r.dir=='up'?' selected':''}>↑ الزيادة تحسن</option><option value="down"${r.dir=='down'?' selected':''}>↓ النقص تحسن</option></select></td><td class="noprint"><button class="del" data-act="delr">✕</button></td></tr>`).join('');
+ const ev=p.ev.map((e,k)=>`<figure data-e="${k}"><img src="${e.src}" alt="شاهد"><input data-k="cap" value="${esc(e.cap)}" placeholder="وصف الشاهد"><button class="del" data-act="dele">حذف</button></figure>`).join('');
+ const opts='<option value="">اختر أداة القياس</option>'+TOOLS.map(t=>`<option${p.tool==t?' selected':''}>${t}</option>`).join('');
+ return `<div class="prog" data-i="${i}"><h2><span>برنامج / مبادرة</span><button class="del" data-act="delp">حذف</button></h2><div class="body">
+ <div class="grid"><div><label>اسم البرنامج أو المبادرة</label>${inp('name',p.name)}</div><div><label>أداة القياس</label><select data-k="tool">${opts}</select></div></div>
+ <h3>مؤشرات الأثر (القياس القبلي والبعدي)</h3><div class="scroll"><table><thead><tr><th>م</th><th>المؤشر</th><th>القياس القبلي</th><th>القياس البعدي</th><th>مقدار التغير</th><th>نسبة التغير</th><th>الاتجاه المرغوب</th><th class="noprint"></th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="5" class="c">متوسط نسبة التحسن (بحسب الاتجاه)</td><td class="c" id="av-${i}">—</td><td class="c" id="lv-${i}" colspan="2">—</td></tr></tfoot></table></div>
+ <button class="add" data-act="addr">+ إضافة مؤشر</button>
+ <h3>التوصيات</h3><textarea data-k="recs">${esc(p.recs)}</textarea>
+ <h3>الشواهد (صور)</h3><div class="ev">${ev}</div>
+ <label class="btn add noprint">+ إضافة شواهد<input type="file" accept="image/*" multiple hidden data-act="ev"></label>
+ </div></div>`}
+function level(a){return a===null?'—':a>=50?'تحسن مرتفع جداً':a>=25?'تحسن مرتفع':a>=10?'تحسن متوسط':a>0?'تحسن محدود':'لا يوجد تحسن'}
+function stat(p){const v=[];p.rows.forEach(r=>{const a=num(r.pre),b=num(r.post);if(a!==null&&b!==null&&a!==0)v.push((b-a)/Math.abs(a)*100*(r.dir=='down'?-1:1))});return v.length?v.reduce((x,y)=>x+y,0)/v.length:null}
+function calc(i){const p=S.programs[i];p.rows.forEach((r,j)=>{const a=num(r.pre),b=num(r.post),c=$(`#ch-${i}-${j}`),d=$(`#pc-${i}-${j}`);if(!c)return;if(a!==null&&b!==null){c.textContent=f(b-a,2);if(a!==0){const x=(b-a)/Math.abs(a)*100,good=(r.dir=='down'?-x:x)>=0;d.textContent=(x>0?'+':'')+f(x)+'%';d.className='c '+(good?'up':'dn')}else{d.textContent='—';d.className='c'}}else{c.textContent='—';d.textContent='—';d.className='c'}});
+ const s=stat(p);$('#av-'+i).textContent=s===null?'—':f(s)+'%';$('#lv-'+i).textContent=level(s)}
+function renderProgs(){$('#progs').innerHTML=S.programs.map(progHTML).join('');S.programs.forEach((_,i)=>calc(i));save()}
+function onEdit(e){const t=e.target;if(t.id==='period'){S.period=t.value;return save()}const k=t.dataset.k;if(!k)return;const pr=t.closest('.prog');if(!pr)return;const i=+pr.dataset.i,p=S.programs[i],tr=t.closest('tr[data-r]'),fg=t.closest('figure');
+ if(tr)p.rows[+tr.dataset.r][k]=t.value;else if(fg)p.ev[+fg.dataset.e].cap=t.value;else p[k]=t.value;calc(i);save()}
+document.addEventListener('input',onEdit);document.addEventListener('change',onEdit);
+document.addEventListener('click',e=>{const b=e.target.closest('button[data-act]');if(!b)return;const a=b.dataset.act,pr=b.closest('.prog'),i=pr?+pr.dataset.i:0;
+ if(a==='addp'){S.programs.push(mk());renderProgs();setTimeout(()=>{const l=document.querySelectorAll('.prog');l[l.length-1].scrollIntoView({behavior:'smooth'})},50)}
+ else if(a==='delp'){if(confirm('حذف هذا البرنامج؟')){S.programs.splice(i,1);if(!S.programs.length)S.programs.push(mk());renderProgs()}}
+ else if(a==='addr'){S.programs[i].rows.push(row());renderProgs()}
+ else if(a==='delr'){S.programs[i].rows.splice(+b.closest('tr').dataset.r,1);renderProgs()}
+ else if(a==='dele'){S.programs[i].ev.splice(+b.closest('figure').dataset.e,1);renderProgs()}});
+document.addEventListener('change',async e=>{const t=e.target,a=t.dataset.act;if(!a)return;
+ if(a==='logo'&&t.files[0]){const d=await compress(t.files[0]);if(d){S.logo=d;logo();save()}}
+ if(a==='ev'){const i=+t.closest('.prog').dataset.i;for(const fl of t.files){const d=await compress(fl);if(d)S.programs[i].ev.push({src:d,cap:''})}renderProgs()}});
+function doPrint(){const n=S.programs[0]&&S.programs[0].name.trim();if(n)document.title='تقرير أثر - '+n;
+ $('#pd').textContent='مجمع الثانوية الثامنة ومتوسطة 39 — تاريخ إعداد التقرير: '+new Date().toLocaleDateString('ar-SA');
+ try{window.print()}catch(e){alert('استخدم قائمة المتصفح ← طباعة، ثم اختر حفظ كـ PDF')}}
+logo();renderProgs();
+</script>
+</body>
+</html>
